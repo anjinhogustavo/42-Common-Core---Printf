@@ -14,7 +14,7 @@ ${NAME}: ${OBJS}
 
 all: ${NAME}
 clean:
-	${RM} ${OBJS}
+	${RM} ${RMFLAGS} ${OBJS}
 fclean: clean
 	${RM} ${NAME}
 re: fclean all

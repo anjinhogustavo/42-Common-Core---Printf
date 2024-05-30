@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_pointeradd(unsigned long nbr)
 {
 	int	count;
 
 	count = 0;
-	if (nbr == "\0")
+	if (!nbr)
 		ft_putstr("(nill)");
 	count += ft_putstr("0x");
 	count += ft_hexadecimal(nbr, 'x');

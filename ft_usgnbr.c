@@ -10,16 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_usgnbr(unsigned int nb)
 {
 	int	mod;
+	int	count;
 
+	count = 0;
 	if (nb >= 10)
 	{
-		ft_putnbr(nb / 10);
+		count += ft_putnbr(nb / 10);
 	}
 	mod = (nb % 10 + '0');
-	ft_putchar(1, &mod, 1);
+	count += ft_putchar(mod);
+	return (count);
 }

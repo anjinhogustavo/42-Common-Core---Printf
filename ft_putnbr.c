@@ -10,26 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
+#include "ft_printf.h"
 
 int	ft_putnbr(int nb)
 {
 	int	mod;
+	int	count;
 
+	count = 0;
 	if (nb == -2147483648)
-		ft_putchar(1, "-2147483648", 11);
+		count += ft_putstr("-2147483648");
 	else
 	{
 		if (nb < 0)
 		{
-			ft_putchar(1, "-", 1);
+			count += ft_putchar('-');
 			nb = -nb;
 		}
 		if (nb >= 10)
 		{
-			ft_putnbr(nb / 10);
+			count += ft_putnbr(nb / 10);
 		}
 		mod = (nb % 10 + '0');
-		ft_putchar(1, &mod, 1);
+		count += ft_putchar(mod);
 	}
+	return (count);
 }

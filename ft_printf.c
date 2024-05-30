@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include "ft_printf.h"
 
 static int	ft_check_format(const char *str, va_list args)
 {
@@ -48,7 +48,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
-			count += ft_check_format(str[i], args);
+			count += ft_check_format(&str[i], args);
 		}
 		else
 			count += ft_putchar(str[i]);
