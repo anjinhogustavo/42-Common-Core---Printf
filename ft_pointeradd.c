@@ -18,7 +18,10 @@ int	ft_pointeradd(unsigned long nbr)
 
 	count = 0;
 	if (!nbr)
-		ft_putstr("(nill)");
+	{
+		count += ft_putstr("(nil)");
+		return (count);
+	}
 	count += ft_putstr("0x");
 	count += ft_hexadecimal(nbr, 'x');
 	return (count);

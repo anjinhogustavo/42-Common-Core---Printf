@@ -18,7 +18,7 @@ int	ft_putstr(char *str)
 
 	count = 0;
 	if (! str)
-		str = ("null");
+		str = ("(null)");
 	while (str[count] != '\0')
 	{
 		ft_putchar(str[count]);

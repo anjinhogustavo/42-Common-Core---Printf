@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 
+int	ft_printf(const char *str, ...);
 int	ft_putchar(int c);
 int	ft_putstr(char *str);
 int	ft_usgnbr(unsigned int nb);

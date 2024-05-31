@@ -28,7 +28,7 @@ static int	ft_check_format(const char *str, va_list args)
 	if (*str == 'u')
 		count += ft_usgnbr(va_arg(args, unsigned int));
 	if (*str == 'x' || *str == 'X')
-		count += ft_hexadecimal(va_arg(args, unsigned long), *str);
+		count += ft_hexadecimal(va_arg(args, unsigned int), *str);
 	if (*str == '%')
 		count += ft_putchar('%');
 	return (count);
