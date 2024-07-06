@@ -12,16 +12,16 @@
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ft_putstr(char *s)
 {
 	int	count;
 
 	count = 0;
-	if (! str)
-		str = ("(null)");
-	while (str[count] != '\0')
+	if (! s)
+		s = ("(null)");
+	while (s[count] != '\0')
 	{
-		ft_putchar(str[count]);
+		ft_putchar(s[count]);
 		count++;
 	}
 	return (count);
