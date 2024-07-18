@@ -52,7 +52,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else if (str[i] == '%' && str[i + 1] == '\0')
 		{
-			return(1);
+			return(-1);
 		}
 		else
 			count += ft_putchar(str[i]);
@@ -66,6 +66,26 @@ int main()
 {
 	ft_printf("csupidxX%");
 	printf("\ncsupidxX%");
+}
+*/
+
+/*
+int main()
+{
+	int	str;
+
+	str = ft_printf("%");
+	
+	ft_printf("%d", str);
+	
+	write(1, "\n" , 1);
+	
+	str = printf("%");
+	
+	printf("%d", str);
+	
+	return (0);
+	
 }
 */
 
